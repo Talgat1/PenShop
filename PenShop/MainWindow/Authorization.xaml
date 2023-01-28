@@ -1,0 +1,24 @@
+﻿<Window x:Class="PenShop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:MaterialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:PenShop"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" Background="Firebrick"
+        Title="Авторизация приложения" Height="550" MinHeight="450" MinWidth="800" Width="800">
+    <Grid>
+        <Border x:Name="BoderAuthorization" Width="400" Height="350" MinHeight="350" MinWidth="400" Background="White">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Авторизация" FontSize="22" HorizontalAlignment="Center" Height="30"/>
+                <TextBlock Text="Войдите или зарегистрируйтесь" FontSize="16" Margin="0,10" HorizontalAlignment="Center"/>
+                <TextBox x:Name="LoginTB" Padding="5,0,0,0"  Margin="0,20,0,10" Height="30" Width="230" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" MaterialDesign:HintAssist.Hint="Введите логин"/>
+                <PasswordBox x:Name="PasswordTB" Padding="5,0,0,0" Height="30" Width="230" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}" MaterialDesign:HintAssist.Hint="Введите пароль"/>
+                <Button x:Name="EnterBtn" Width="230" Margin="0,100,0,0" Height="25" Content="Войти" Background="Black" Click="EnterBtn_Click"  Style="{DynamicResource MaterialDesignFlatMidBgButton}"/>
+                <Button x:Name="RegisBtn" Width="230" Margin="0,20,0,0" Height="25" Content="Зарегистрироваться" Background="Black" Click="RegisBtn_Click" Style="{DynamicResource MaterialDesignFlatMidBgButton}" />
+            </StackPanel>
+        </Border>
+        <Frame x:Name="FrameAuth"></Frame>
+    </Grid>
+</Window>

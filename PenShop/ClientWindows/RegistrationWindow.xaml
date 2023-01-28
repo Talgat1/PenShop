@@ -1,0 +1,96 @@
+﻿<Window
+    x:Class="PenShop.ClientWindows.RegistrationWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:MaterialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:PenShop.ClientWindows"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Регистрация"
+    Width="800"
+    Height="450"
+    MinWidth="800"
+    MinHeight="450"
+    Background="Firebrick"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Grid>
+        <Border
+            x:Name="BoderAuthorization"
+            Width="400"
+            Height="350"
+            MinWidth="400"
+            MinHeight="350"
+            Background="White">
+            <StackPanel Orientation="Vertical">
+                <TextBlock
+                    Height="30"
+                    HorizontalAlignment="Center"
+                    FontSize="22"
+                    Text="Регистрация" />
+                <TextBlock
+                    Margin="0,10"
+                    HorizontalAlignment="Center"
+                    FontSize="16"
+                    Text="Заполните все данный и зарегистрируйтесь" />
+                <TextBox
+                    x:Name="LoginTB"
+                    Width="230"
+                    Height="30"
+                    Margin="0,20,0,10"
+                    Padding="5,0,0,0"
+                    HorizontalAlignment="Center"
+                    MaterialDesign:HintAssist.Hint="Придумайте логин"
+                    Style="{DynamicResource MaterialDesignFloatingHintTextBox}" />
+                <PasswordBox
+                    x:Name="PasswordTB"
+                    Width="230"
+                    Height="30"
+                    Padding="5,0,0,0"
+                    HorizontalAlignment="Center"
+                    MaterialDesign:HintAssist.Hint="Придумайте пароль"
+                    Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}" />
+                <ComboBox
+                    x:Name="TypeClientCB"
+                    Width="230"
+                    Height="30"
+                    Margin="0,10,0,0"
+                    Padding="5,0,0,0"
+                    HorizontalAlignment="Center"
+                    MaterialDesign:HintAssist.Hint="Выберите тип вашей организации"
+                    SelectionChanged="TypeClientCB_SelectionChanged"
+                    Style="{DynamicResource MaterialDesignFloatingHintComboBox}">
+                    <ComboBoxItem Content="Физ. Лицо" />
+                    <ComboBoxItem Content="Юр. Лицо" />
+                </ComboBox>
+                <TextBox
+                    x:Name="NameCompanyTB"
+                    Width="230"
+                    Height="30"
+                    Margin="0,10,0,10"
+                    Padding="5,0,0,0"
+                    HorizontalAlignment="Center"
+                    MaterialDesign:HintAssist.Hint="Введите название вашей организации"
+                    Style="{DynamicResource MaterialDesignFloatingHintTextBox}" />
+                <Button
+                    x:Name="RegisBtn"
+                    Width="230"
+                    Height="25"
+                    Margin="0,20,0,0"
+                    Background="Black"
+                    Click="RegisBtn_Click"
+                    Content="Зарегистрироваться"
+                    Style="{DynamicResource MaterialDesignFlatMidBgButton}" />
+                <Button
+                    x:Name="ExitBtn"
+                    Width="230"
+                    Height="25"
+                    Margin="0,20,0,0"
+                    Background="Black"
+                    Click="ExitBtn_Click"
+                    Content="Назад"
+                    Style="{DynamicResource MaterialDesignFlatMidBgButton}" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
